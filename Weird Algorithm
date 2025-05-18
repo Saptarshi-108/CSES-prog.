@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class WeirdAlgo {
+    public static void recce(int num){
+        if (num==1) {
+            System.out.print(num+" ");
+            return;
+        }
+        else if (num%2==1){
+            System.out.print(num+" ");
+            recce(num=(num*3)+1);
+        }
+        else if (num%2==0)  {
+            System.out.print(num+" ");
+            recce(num=(int)num/2);
+        }
+    }
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        int number = sc.nextInt();
+        recce(number);
+        sc.close();
+
+    }
+}
